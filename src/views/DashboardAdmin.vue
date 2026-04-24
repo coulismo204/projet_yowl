@@ -97,7 +97,6 @@ async function tauxCroissanceUsers() {
   async function deleteAccount(id) {
     if (confirm('Votre compte va être supprimer definitivement')) {
       await api.delete(`user/delete/${id}`)
-      localStorage.removeItem('token')
     }
   }
 
