@@ -98,9 +98,11 @@ onMounted(() => {
     <!-- CARTE COMMENTAIRE -->
     <article v-for="val in allpost " class="comment-card">
       <!-- la partir ou on doit injsecter l'url -->
-      <div class="url">
-        <embed type="video/webm" src="{{ val?.url }}" ></embed >
-      </div>
+<div class="url">
+  <a :href="val?.url" target="_blank" rel="noopener noreferrer" class="url-preview">
+     {{ val?.url }}
+  </a>
+</div>
  
       <!-- Contenu -->
       <div class="card-body"> 
