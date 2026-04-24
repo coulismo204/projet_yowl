@@ -256,19 +256,30 @@ html, body {
   width: 280px;
   flex-shrink: 0;
   background: #003f6e;
-  position: relative;
-  min-height: 200px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
 }
  
-.url embed {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+.url-preview {
   display: block;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #FF7A35;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  word-break: break-all;
+  width: 100%;
+  transition: background 0.2s;
 }
- 
+
+.url-preview:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
 /* Corps de la carte */
 .card-body {
   flex: 1;
@@ -408,8 +419,8 @@ html, body {
  
   .url {
     width: 100%;
-    height: 200px;
-    position: relative;
+    height: auto;
+    padding: 16px;
   }
  
   .card-body {
