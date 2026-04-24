@@ -134,7 +134,9 @@ async function submitReply() {
       <!-- Commentaire principal id parend -->
       <article class="main-comment card">
         <div class="media-container">
-          <iframe :src="url" frameborder="0" allowfullscreen class="responsive-iframe"></iframe>
+          <a :href="url" target="_blank" rel="noopener noreferrer" class="url-preview">
+             {{ url }}
+          </a>
         </div>
         <div class="comment-body">
           <h1 class="comment-title">{{ title }}</h1>
